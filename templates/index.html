@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Back Ribs</title>
+  <link rel="stylesheet" href="/static/css/theme.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+  <script src="/static/dynamic_plot.js"></script>
+</head>
+<body>
+      <div class="container-fluid">
+          <div class="container">
+          <div class="jumbotron text-center">
+          <h1>Behold! Boutious belly bacteria! Beatiful biota!</h1>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="sel1">Select sample:</label>
+          <select class="form-control" id="selDataset" onchange="optionChanged(this.value)">
+          </select>
+          <div id="pie"></div>
+          <div id="bibbles"></div>
+          <div class="panel panel-primary">
+          <div class="panel-heading">Sample Metadata</div>
+          <div class="panel-body" id="factZone"></div>
+          </div>
+      </div>
+</body>
+</html>
