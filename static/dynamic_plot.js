@@ -1,5 +1,5 @@
 function init() {
-    var queryURL = "http://localhost:5000/names";
+    var queryURL = "/names";
     d3.json(queryURL, function (error, response) {
         if (error) return console.warn(error);
         for (var i = 0; i < response.length; i++) {
@@ -17,7 +17,7 @@ function init() {
 
 function genPie() {
     sample = document.getElementById('selDataset').options[0].value;
-    var url = "http://localhost:5000/samples/" + sample;
+    var url = "/samples/" + sample;
     Plotly.d3.json(url, function(error, response){
         if (error) {
             return console.warn(error);
@@ -32,7 +32,7 @@ function genPie() {
 
 function genBibble() {
     sample = document.getElementById('selDataset').options[0].value;
-    var url = "http://localhost:5000/samples/" + sample;
+    var url = "/samples/" + sample;
     Plotly.d3.json(url, function(error, response){
         if (error) {
             return console.warn(error);
@@ -57,7 +57,7 @@ function genBibble() {
 }
 
 function updatePie(sample) {
-    var url = "http://localhost:5000/samples/" + sample;
+    var url = "/samples/" + sample;
     Plotly.d3.json(url, function(error, response){
         if (error) {
             return console.warn(error);
@@ -68,7 +68,7 @@ function updatePie(sample) {
     });
 }
 function updateBibble(sample) {
-        var url = "http://localhost:5000/samples/" + sample;
+        var url = "/samples/" + sample;
     Plotly.d3.json(url, function(error, response){
         if (error) {
             return console.warn(error);
@@ -80,7 +80,7 @@ function updateBibble(sample) {
 
 function updatePanel(sample) {
     var obj = document.getElementById('factZone');
-    var queryURL = "http://localhost:5000/metadata/" + sample;
+    var queryURL = "/metadata/" + sample;
     d3.json(queryURL, function (error, response) {
         if (error) return console.warn(error);
         Object.keys(response).forEach(function(key) {
